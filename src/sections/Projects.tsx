@@ -1,6 +1,7 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import Image from "next/image";
 
 const portfolioProjects = [
   {
@@ -42,5 +43,41 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <div>Projects Section</div>;
+  return (
+    <div>
+      <div className="container">
+        <div className="flex justify-center">
+          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
+            Real World Projects
+          </p>
+        </div>
+        <h2 className="font-serif text-3xl font-semibold text-center mt-6">Featured Projects</h2>
+        <p>
+          Explore how I brought design concepts to life through captivating
+          digital experiences.
+        </p>
+        <div>
+          {portfolioProjects.map((project) => (
+            <div key={project.title}>
+              <div>
+                <span>{project.company}</span>
+                <span>{project.year}</span>
+              </div>
+              <h3>{project.title}</h3>
+              <hr />
+              <ul>
+                {project.results.map((result, index) => (
+                  <li key={index}>{result.title}</li>
+                ))}
+              </ul>
+              <a href={project.link} target="_blank" rel="noreferrer">
+                <button>View Live Site</button>
+              </a>
+              <Image src={project.image} alt={project.title} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
