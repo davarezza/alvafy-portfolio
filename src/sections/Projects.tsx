@@ -6,6 +6,7 @@ import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
@@ -23,9 +24,6 @@ const portfolioProjects = [
     link: "https://youtu.be/4k7IdSLxh6w",
     githubLink: "https://github.com/davarezza",
     image: darkSaasLandingPage,
-    bgColor: "bg-gray-850",
-    gradientFrom: "from-gray-800/30",
-    gradientTo: "to-gray-900/30",
   },
   {
     company: "Creative Solutions",
@@ -42,9 +40,6 @@ const portfolioProjects = [
     link: "https://youtu.be/7hi5zwO75yc",
     githubLink: "https://github.com/davarezza",
     image: lightSaasLandingPage,
-    bgColor: "bg-gray-850",
-    gradientFrom: "from-gray-800/30",
-    gradientTo: "to-gray-900/30",
   },
   {
     company: "Quantum Dynamics",
@@ -61,9 +56,6 @@ const portfolioProjects = [
     link: "https://youtu.be/Z7I5uSRHMHg",
     githubLink: "https://github.com/davarezza",
     image: lightSaasLandingPage,
-    bgColor: "bg-gray-850",
-    gradientFrom: "from-gray-800/30",
-    gradientTo: "to-gray-900/30",
   },
   {
     company: "NextGen Tech",
@@ -80,36 +72,26 @@ const portfolioProjects = [
     link: "https://youtu.be/Z7I5uSRHMHg",
     githubLink: "https://github.com/davarezza",
     image: darkSaasLandingPage,
-    bgColor: "bg-gray-850",
-    gradientFrom: "from-gray-800/30",
-    gradientTo: "to-gray-900/30",
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-12">
+    <section className="pb-8">
       <div className="container">
-        <div className="flex justify-center">
-          <p className="uppercase md:text-lg font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
-            Real World Projects
-          </p>
-        </div>
-        <h2 className="font-serif text-3xl md:text-5xl font-semibold text-center mt-4 mb-6 text-white">
-          Featured Projects
-        </h2>
-        <p className="text-center md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Explore how I developed scalable and maintainable applications with a
-          focus on performance, security, and user experience.
-        </p>
+        <SectionHeader
+          title="Featured Projects"
+          eyebrow="Real World Projects"
+          description="Explore how I developed scalable and maintainable applications with a focus on performance, security, and user experience."
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
-              className={`${project.bgColor} rounded-2xl overflow-hidden border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 relative group`}
+              className={`bg-gray-850 rounded-2xl overflow-hidden border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 relative group`}
             >
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo} opacity-50 pointer-events-none`}
+                className={`absolute inset-0 bg-gradient-to-br from-gray-800/30 to-gray-900/30 opacity-50 pointer-events-none`}
               />
 
               <div
@@ -150,7 +132,7 @@ export const ProjectsSection = () => {
                     <ArrowUpRightIcon className="size-5" />
                   </a>
                 </div>
-                <h3 className="font-serif font-semibold text-xl mt-4 text-white">
+                <h3 className="font-semibold text-xl mt-4 text-white">
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-400 mt-2">
