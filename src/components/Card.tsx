@@ -8,7 +8,7 @@ export const Card = ({
 }: PropsWithChildren<{ className?: string }>) => {
   return (
     <div className={twMerge(
-      "bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:outline-white after:opacity-20 after:rounded-3xl after:pointer-events-none border-2 border-white/20 p-6", 
+      "bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:outline-offset-2 after:outline-white after:opacity-20 after:rounded-3xl after:pointer-events-none border-2 border-white/20", 
       className
     )}>
       <div
