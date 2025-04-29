@@ -1,4 +1,5 @@
 import StarIcon from "@/assets/icons/star.svg";
+import { Fragment } from "react";
 
 const words = [
   "Scalable",
@@ -23,15 +24,19 @@ export const TapeSection = () => {
           
           <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
 
-          <div className="flex flex-none gap-4 py-3">
-            {words.map((word) => (
-              <div key={word} className="inline-flex gap-4 items-center">
-                <span className="text-gray-900 uppercase font-bold text-sm">
-                  {word}
-                </span>
-                <StarIcon className="size-6 text-gray-900 -rotate-12" />
-              </div>
-            ))}
+          <div className="flex flex-none gap-4 pr-4 py-3 animate-move-left [animation-duration:25s]">
+            {[...new Array(2).fill(0).map((_, idx) => (
+              <Fragment key={idx}>
+              {words.map((word) => (
+                <div key={word} className="inline-flex gap-4 items-center">
+                  <span className="text-gray-900 uppercase font-bold text-sm">
+                    {word}
+                  </span>
+                  <StarIcon className="size-6 text-gray-900 -rotate-12" />
+                </div>
+              ))}
+              </Fragment>
+            ))]}
           </div>
         </div>
       </div>
