@@ -77,105 +77,100 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-8">
-      <div className="container">
-        <SectionHeader
-          title="Featured Projects"
-          eyebrow="Real World Projects"
-          description="Explore how I developed scalable and maintainable applications with a focus on performance, security, and user experience."
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          {portfolioProjects.map((project) => (
+    <div className="container pb-8">
+      <SectionHeader
+        title="Featured Projects"
+        eyebrow="Real World Projects"
+        description="Explore how I developed scalable and maintainable applications with a focus on performance, security, and user experience."
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        {portfolioProjects.map((project) => (
+          <div
+            key={project.title}
+            className={`bg-gray-850 rounded-2xl overflow-hidden border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 relative group`}
+          >
             <div
-              key={project.title}
-              className={`bg-gray-850 rounded-2xl overflow-hidden border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 relative group`}
-            >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br from-gray-800/30 to-gray-900/30 opacity-50 pointer-events-none`}
+              className={`absolute inset-0 bg-gradient-to-br from-gray-800/30 to-gray-900/30 opacity-50 pointer-events-none`}
+            />
+
+            <div
+              className="absolute inset-0 opacity-10 bg-cover bg-center -z-10"
+              style={{ backgroundImage: `url(${grainImage.src})` }}
+            ></div>
+
+            <div className="relative overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
               />
-
-              <div
-                className="absolute inset-0 opacity-10 bg-cover bg-center -z-10"
-                style={{ backgroundImage: `url(${grainImage.src})` }}
-              ></div>
-
-              <div className="relative overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-white hover:text-emerald-400 transition-colors duration-300"
-                  >
-                    <ArrowUpRightIcon className="size-8" />
-                  </a>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-center">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-xs text-transparent bg-clip-text">
-                    <span>{project.company}</span>
-                    <span>&bull;</span>
-                    <span>{project.year}</span>
-                  </div>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
-                  >
-                    <ArrowUpRightIcon className="size-5" />
-                  </a>
-                </div>
-                <h3 className="font-semibold text-xl mt-4 text-white">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-400 mt-2">
-                  {project.description}
-                </p>
-                <hr className="border-t border-gray-800 my-4" />
-                <ul className="flex flex-col gap-3">
-                  {project.results.map((result, index) => (
-                    <li
-                      key={index}
-                      className="flex gap-2 text-sm text-gray-400"
-                    >
-                      <CheckCircleIcon className="size-5 text-emerald-400" />
-                      <span>{result.title}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="bg-white/10 text-gray-300 text-xs px-3 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-6">
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-emerald-500/10 border border-emerald-500/20 rounded-lg hover:bg-emerald-500/20 hover:border-emerald-500/30 transition-all duration-300"
-                  >
-                    <FontAwesomeIcon icon={faGithub} className="size-5 mr-2" />
-                    Explore The Codebase
-                  </a>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white hover:text-emerald-400 transition-colors duration-300"
+                >
+                  <ArrowUpRightIcon className="size-8" />
+                </a>
               </div>
             </div>
-          ))}
-        </div>
+            <div className="p-6">
+              <div className="flex justify-between items-center">
+                <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-xs text-transparent bg-clip-text">
+                  <span>{project.company}</span>
+                  <span>&bull;</span>
+                  <span>{project.year}</span>
+                </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                >
+                  <ArrowUpRightIcon className="size-5" />
+                </a>
+              </div>
+              <h3 className="font-semibold text-xl mt-4 text-white">
+                {project.title}
+              </h3>
+              <p className="text-sm text-gray-400 mt-2">
+                {project.description}
+              </p>
+              <hr className="border-t border-gray-800 my-4" />
+              <ul className="flex flex-col gap-3">
+                {project.results.map((result, index) => (
+                  <li key={index} className="flex gap-2 text-sm text-gray-400">
+                    <CheckCircleIcon className="size-5 text-emerald-400" />
+                    <span>{result.title}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="bg-white/10 text-gray-300 text-xs px-3 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-6">
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-white bg-emerald-500/10 border border-emerald-500/20 rounded-lg hover:bg-emerald-500/20 hover:border-emerald-500/30 transition-all duration-300"
+                >
+                  <FontAwesomeIcon icon={faGithub} className="size-5 mr-2" />
+                  Explore The Codebase
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };

@@ -5,11 +5,12 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import Image from "next/image";
 import { HeroOrbit } from "@/components/HeroOrbit";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
     <div className="py-28 md:py-40 lg:py-52 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)] pointer-events-none">
         <div className="absolute inset-0 -z-30 opacity-5" style={{backgroundImage:`url(${grainImage.src})`}}></div>
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
@@ -54,14 +55,14 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 py-2.5 rounded-xl">
+          <Link href="#projects" scroll={true} className="inline-flex items-center gap-2 border border-white/15 px-6 py-2.5 rounded-xl">
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-2.5 rounded-xl">
+          </Link>
+          <Link href="#contact" scroll={true} className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-2.5 rounded-xl">
             <span>👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
