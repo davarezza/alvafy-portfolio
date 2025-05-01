@@ -1,3 +1,7 @@
+import smkWebsiteGrade from "@/assets/images/projects/project1.png";
+import restfulLibrary from "@/assets/images/projects/project-restful1.png";
+import ticketingApp from "@/assets/images/projects/project4.png";
+import thriftHaven from "@/assets/images/projects/project5.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,68 +14,71 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
-    company: "Tech Innovators",
-    year: "2023",
-    title: "Laravel E-Commerce Platform",
+    company: "Vocational Competency Exam Project",
+    year: "2025",
+    title: "Airline Ticket Booking App",
     description:
-      "A fully-featured e-commerce platform built with Laravel and Tailwind CSS, designed for scalability and seamless user experience.",
-    results: [
-      { title: "Improved checkout process for better user experience" },
-      { title: "Improved search functionality for more accurate results" },
-      { title: "Optimized page load speed for better user experience" },
-    ],
-    technologies: ["Laravel", "Tailwind CSS", "Livewire", "MySQL"],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    githubLink: "https://github.com/davarezza",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Creative Solutions",
-    year: "2022",
-    title: "Tailwind CSS Admin Dashboard",
-    description:
-      "A responsive admin dashboard built with Tailwind CSS and Alpine.js, offering a modern and intuitive interface for managing data.",
-    results: [
-      { title: "Improved visualization of data for easier analysis" },
-      { title: "Provided reusable UI components for faster development" },
-      { title: "Optimized mobile view for better user experience" },
-    ],
-    technologies: ["Tailwind CSS", "Alpine.js", "Laravel", "Vite"],
+      "Full-stack flight reservation platform developed for my vocational competency exam, featuring multi-role access, seat selection, and complete booking management.",
+    "results": [
+    { "title": "Implemented multi-role authentication (admin/staff/passenger)" },
+    { "title": "Developed interactive seat selection with real-time updates" },
+    { "title": "Created admin panel for comprehensive flight management" },
+    { "title": "Built responsive booking interface with payment integration" },
+    { "title": "Designed responsive interface for all school stakeholders" }
+  ],
+    technologies: ["Laravel", "Tailwind CSS", "Bootstrap", "JavaScript", "MySQL", "Alpine.js", "JQuery"],
     link: "https://youtu.be/7hi5zwO75yc",
-    githubLink: "https://github.com/davarezza",
-    image: lightSaasLandingPage,
+    githubLink: "https://github.com/davarezza/SkyRail-Ticketing-App",
+    image: ticketingApp,
   },
   {
-    company: "Quantum Dynamics",
+    company: "Personal Project",
     year: "2023",
-    title: "Laravel SaaS Application",
+    title: "School Academic Information System",
     description:
-      "A SaaS application built with Laravel and Inertia.js, designed to streamline business operations and improve user engagement.",
+      "A comprehensive school management platform built with Laravel and Bootstrap for my 11th-grade final project, featuring role-based access control, grade management, and academic reporting.",
     results: [
-      { title: "Supported user growth with scalable architecture" },
-      { title: "Optimized API performance for better user experience" },
-      { title: "Improved user retention through better UI/UX design" },
+      { "title": "Implemented secure authentication system with middleware protection" },
+      { "title": "Developed CRUD functionality for teacher grade management" },
+      { "title": "Created multi-role dashboard (admin, teacher, student)" },
+      { "title": "Designed responsive interface for all school stakeholders" }
+    ],
+    technologies: ["Laravel", "Bootstrap", "JavaScript", "MySQL"],
+    link: "https://youtu.be/4k7IdSLxh6w",
+    githubLink: "https://github.com/davarezza/Academic-Laravel-8-App",
+    image: smkWebsiteGrade,
+  },
+  {
+    company: "Sekawan Media (Internship Project)",
+    year: "2024",
+    title: "RESTful Library API Backend",
+    description:
+      "Robust backend API system developed during my internship, implementing MVC architecture and database transactions for reliable media data processing.",
+    results: [
+      { "title": "Designed RESTful endpoints following industry best practices" },
+      { "title": "Implemented secure database transactions for data integrity" },
+      { "title": "Developed comprehensive API documentation using Postman" },
     ],
     technologies: ["Laravel", "Inertia.js", "Tailwind CSS", "Redis"],
     link: "https://youtu.be/Z7I5uSRHMHg",
-    githubLink: "https://github.com/davarezza",
-    image: lightSaasLandingPage,
+    githubLink: "https://github.com/davarezza/Restful-API-Library",
+    image: restfulLibrary,
   },
   {
-    company: "NextGen Tech",
+    company: "Personal Project",
     year: "2023",
-    title: "Tailwind CSS Landing Page",
+    title: "Thrift Haven (Tokopedia Clone)",
     description:
-      "A high-conversion landing page built with Tailwind CSS and Laravel, optimized for performance and SEO.",
+      "An evolving e-commerce platform inspired by Tokopedia, built with Laravel and Bootstrap, laying foundation for comprehensive marketplace features.",
     results: [
-      { title: "Improved Call-to-Action effectiveness for better conversion" },
-      { title: "Optimized SEO strategy for better search engine ranking" },
-      { title: "Improved page speed for better user experience" },
+      { "title": "Implemented core e-commerce functionality with product listings" },
+      { "title": "Developed responsive storefront using Bootstrap components" },
+      { "title": "Established scalable Laravel architecture for future expansion" },
     ],
-    technologies: ["Tailwind CSS", "Laravel", "Blade", "SEO"],
+    technologies: ["Laravel", "Bootstrap", "JavaScript", "MySQL"],
     link: "https://youtu.be/Z7I5uSRHMHg",
-    githubLink: "https://github.com/davarezza",
-    image: darkSaasLandingPage,
+    githubLink: "https://github.com/davarezza/Laravel-ThriftHaven-App",
+    image: thriftHaven,
   },
 ];
 
